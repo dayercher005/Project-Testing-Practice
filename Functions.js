@@ -5,7 +5,7 @@ function capitalize(string){
 
 function reverseString(string){
 
-    return string.split('').reverse().join();
+    return string.split('').reverse().join('');
 }
 
 class Calculator{
