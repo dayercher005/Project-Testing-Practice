@@ -29,8 +29,26 @@ const Calculator = () => {
     return {add, subtract, divide, multiply};
 }
 
+
 function caesarCipher(string, number){
 
+    let result = "";
+    for (let i = 0; i < string.length; i++){
+
+        const code = string.charCodeAt(i);
+
+        if (code >= 97 && code <= 122){
+            const shiftedCode = ((code - 97 + number) % 26 + 26) % 26;
+            result += String.fromCharCode(97 + shiftedCode);
+        } else if (code >= 65 && code <= 90){
+            const shiftedCode = ((code - 65 + number) % 26 + 26) % 26;
+            result += String.fromCharCode(65 + shiftedCode);
+        } else {
+            result += string[i];
+        }
+    }
+
+    return result;
 }
 
 function analyzeArray(array){

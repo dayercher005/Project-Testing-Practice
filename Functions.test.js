@@ -18,11 +18,11 @@ test('A Calculator object that contains functions for the basic operations: add,
     expect(Calculator().multiply(1, 2)).toBe(2);
 });
 
-/*
+
 test('Caesar Cipher that takes a string and a shift factor and returns is with each character shifted.', () => {
-    
+    expect(caesarCipher('Hello, World!', 3)).toBe('Khoor, Zruog!');
 });
-*/
+
 
 test('An analyzeArray function that takes an array of numbers and returns an object with the following properties: average, min, max, length.', () => {
     expect(analyzeArray([1, 2, 3, 4, 5])).toEqual(
